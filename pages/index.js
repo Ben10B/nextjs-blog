@@ -34,6 +34,16 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
       </section>
+      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <h2 className={utilStyles.headingLg}>Demos</h2>
+        <ul className={utilStyles.list}>
+          <li className={utilStyles.listItem}>
+            <Link href={`/notes`}>
+              <a>Notes App</a>
+            </Link>
+          </li>
+        </ul>
+      </section>
     </Layout>
   )
 }
