@@ -11,12 +11,9 @@
     "@firebase/app": "^0.6.11",
     "@firebase/auth": "^0.14.9",
     "@firebase/storage": "^0.3.43",
-    "body-parser": "^1.19.0",
-    "bufferutil": "^4.0.1",
     "classnames": "^2.2.6",
     "date-fns": "^2.16.1",
     "faker": "^5.1.0",
-    "filereader": "^0.10.3",
     "firebase": "^7.21.1",
     "firebase-admin": "^9.2.0",
     "fs": "0.0.1-security",
@@ -42,8 +39,6 @@
     "url": "^0.11.0",
     "url-loader": "^4.1.0",
     "utf-8-validate": "^5.0.2",
-    "uuid": "^8.3.0",
-    "ws": "^7.3.1",
-    "xmlhttprequest": "^1.8.0"
+    "ws": "^7.3.1"
   }
 }
