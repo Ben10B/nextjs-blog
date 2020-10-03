@@ -46,3 +46,17 @@ h1 {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
 }
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.directory-container {
+  margin: 16px 8px;
+}
