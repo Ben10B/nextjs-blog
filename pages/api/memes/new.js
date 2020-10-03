@@ -8,19 +8,27 @@ const USERS = [
 ]
 
 export default async (req, res) => {
-  const { body } = req;
-  try {
-    if(body.message.content.type === 'image') {
-      let user = USERS.find(x => x.id === body.from.id).name;
-      firebase.database().ref('users/'+user).push({
-        timestamp: body.timestamp,
-        url: body.message.content.image.url
-      });
-    }
-    console.log('INCOMING: ', body);
-    res.status(200).end();
-  } catch(e) {
-    console.log(e);
-    res.status(400).json({ success: false });
+  const { method, body } = req;
+  switch(method) {
+    case 'GET': 
+      res.status(200).json({ msg: "You're doing it wrong big fella..." })
+    break;
+    case 'POST': 
+      try {
+        if(body.message.content.type === 'image') {
+          let user = USERS.find(x => x.id === body.from.id).name;
+          firebase.database().ref('users/'+user).push({
+            timestamp: body.timestamp,
+            url: body.message.content.image.url
+          });
+        }
+        console.log('INCOMING: ', body);
+        res.status(200).end();
+      } catch(e) {
+        console.log(e);
+        res.status(400).json({ success: false });
+      }
+    break;
+    default: break;
   }
 }
