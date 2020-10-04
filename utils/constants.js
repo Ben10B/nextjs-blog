@@ -88,3 +88,20 @@ export const ROUTES = [
     }
   ]
 ];
+
+export const NEXMO = {
+  ERRORS: {
+    NEW_USER: "To add images, type your name as follows:\n\nName.Morgan"
+  },
+  SUCCESS: {
+    NEW_USER: "New user created successfully!\nSend your funny images and gifs!",
+    EDIT_USER: "User edited successfully!",
+    IMAGE_UPLOADED: 'Image uploaded successfully!'
+  },
+  HELP: {
+    HEADER: '- - - - - - - - - - - - - - - - - HELP - - - - - - - - - - - - - - - - -',
+    NAME: 'To add user or edit name, type: Name.Morgan',
+    IMG: 'Some images may be too big to send. Aw well...',
+    TYPE: "Type any character for details."
+  }
+}
