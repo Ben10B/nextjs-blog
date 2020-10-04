@@ -8,7 +8,7 @@ export default async (req, res) => {
   let { message: { content } } = body;
   switch(method) {
     case 'GET': 
-      res.status(200).json({ msg: "You're doing it wrong big fella..." });
+      return res.status(200).json({ msg: "You're doing it wrong big fella..." });
     break;
     case 'POST': 
       try {
@@ -18,10 +18,10 @@ export default async (req, res) => {
         else if(exists && content.type === 'text') editUser(body);
         else if(exists && content.type === 'image') addImage(body);
 
-        res.status(200).end();
+        return res.status(200).end();
       } catch(e) {
         console.log(e);
-        res.status(400).json({ success: false });
+        return res.status(400).json({ success: false });
       }
     break;
     default: break;
