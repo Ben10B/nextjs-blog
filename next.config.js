@@ -1,9 +1,9 @@
 const withImages = require('next-images');
+const keys = require('./config/keys');
 
 module.exports = withImages({
   env: {
-    MONGO_URI: 'mongodb://ben:admin1234@ds139037.mlab.com:39037/shopping-cart-template',
-    secret: '',
-    FIREBASE_PROJECTID: 'surprise-morgan'
+    MONGO_URI: keys.mongoURI,
+    FIREBASE_PROJECTID: keys.firebaseProjectId
   }
 })
