@@ -3,13 +3,14 @@ import 'firebase/auth';
 import 'firebase/database';
 import '@firebase/storage';
 global.XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
+const keys = require('../config/keys');
 
 const firebaseConfig = {
   apiKey: 'AIzaSyDa3dLC5Ao_svAAZTI01ntXok73A6oiYDA',
-  authDomain: process.env.FIREBASE_PROJECTID+'.firebaseapp.com',
-  databaseURL: `https://${process.env.FIREBASE_PROJECTID}.firebaseio.com`,
-  projectId: process.env.FIREBASE_PROJECTID,
-  storageBucket: process.env.FIREBASE_PROJECTID+'.appspot.com',
+  authDomain: keys.FIREBASE_PROJECTID+'.firebaseapp.com',
+  databaseURL: `https://${keys.FIREBASE_PROJECTID}.firebaseio.com`,
+  projectId: keys.FIREBASE_PROJECTID,
+  storageBucket: keys.FIREBASE_PROJECTID+'.appspot.com',
   messagingSenderId: '547344388751',
 };
 
