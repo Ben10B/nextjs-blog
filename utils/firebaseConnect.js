@@ -2,7 +2,6 @@ import * as firebase from 'firebase';
 import 'firebase/auth';
 import 'firebase/database';
 import '@firebase/storage';
-global.XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 const keys = require('../config/keys');
 
 const firebaseConfig = {
