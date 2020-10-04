@@ -1,5 +1,4 @@
 import * as firebase from 'firebase';
-// import * as firebaseAdmin from 'firebase-admin';
 import 'firebase/auth';
 import 'firebase/database';
 import '@firebase/storage';
@@ -7,10 +6,10 @@ global.XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 
 const firebaseConfig = {
   apiKey: 'AIzaSyDa3dLC5Ao_svAAZTI01ntXok73A6oiYDA',
-  authDomain: 'surprise-morgan.firebaseapp.com',
-  databaseURL: 'https://surprise-morgan.firebaseio.com',
-  projectId: 'surprise-morgan',
-  storageBucket: 'surprise-morgan.appspot.com',
+  authDomain: process.env.FIREBASE_PROJECTID+'.firebaseapp.com',
+  databaseURL: `https://${process.env.FIREBASE_PROJECTID}.firebaseio.com`,
+  projectId: process.env.FIREBASE_PROJECTID,
+  storageBucket: process.env.FIREBASE_PROJECTID+'.appspot.com',
   messagingSenderId: '547344388751',
 };
 
